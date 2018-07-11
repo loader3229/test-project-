@@ -4,3 +4,5 @@ compiler:
 before_install: 
   - pip install --user cpp-coveralls
 script: g++ ./1.cpp -o ./1.exe
+after_success: 
+  - coveralls -h
