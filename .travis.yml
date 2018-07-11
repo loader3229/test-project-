@@ -1,2 +1,2 @@
 language: cpp
-script: gcc ./1.cpp -o ./1.exe
+script: g++ ./1.cpp -o ./1.exe
