@@ -3,6 +3,7 @@ compiler:
   - g++
 before_install: 
   - pip install --user cpp-coveralls
-script: g++ ./1.cpp -o ./1.exe
+script: g++ ./1.cpp -o ./1.exe --enable-gcov
 after_success: 
   - coveralls -h
+  - coveralls
