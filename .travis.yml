@@ -7,6 +7,9 @@ script:
   - g++  -fprofile-arcs -ftest-coverage -g3 ./1.cpp -o ./1.exe -static-libstdc++ -static-libgcc -g3
 after_success: 
   - ./1.exe
+  - ./1.exe
+  - ./1.exe
+  - ./1.exe
   - gcov ./1.cpp
   - coveralls -h
   - coveralls
