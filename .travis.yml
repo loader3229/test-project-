@@ -3,7 +3,10 @@ compiler:
   - g++
 before_install: 
   - pip install --user cpp-coveralls
-script: g++ ./1.cpp -o ./1.exe
+script: 
+  - g++  -fprofile-arcs -ftest-coverage -g3 ./1.cpp -o ./1.exe -static-libstdc++ -static-libgcc -g3
 after_success: 
+  - 1.exe
+  - gcov 1.cpp
   - coveralls -h
   - coveralls
